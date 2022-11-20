@@ -175,7 +175,6 @@ int main(int argc, char ** argv)
 
 	printf("\n\nAvg_Concorde_Distance: %f Avg_MCTS_Distance: %f Avg_Gap: %f Total_Time: %.2f Seconds \n Beat_Best_Known_Times: %d Match_Best_Known_Times: %d Miss_Best_Known_Times: %d \n",
 		Sum_Opt_Distance / Test_Inst_Num, Sum_My_Distance / Test_Inst_Num, Sum_Gap / Test_Inst_Num, ((double)clock() - Overall_Begin_Time) / CLOCKS_PER_SEC, Beat_Best_Known_Times, Match_Best_Known_Times, Miss_Best_Known_Times);
-	getchar();
 
 	return 0;
 }

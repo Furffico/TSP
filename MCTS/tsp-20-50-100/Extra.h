@@ -397,6 +397,7 @@ void Markov_Decision_Process_GPU()
 			Virtual_City_Num, Total_thread_num, Candidate_G, Candidate_Num_G, Current_Instance_Best_Distance_G, Temp_City_Sequence_G,
 			Temp_Pair_Num_G, Probabilistic_G, Promising_City_G, Avg_Weight_G, Promising_City_Num_G, Pair_City_Num_G, Real_Gain_G, Gain_G,
 			Solution_G, City_Sequence_G, Current_Solution_Double_Distance_G, Coordinate_X_G, Coordinate_Y_G);
+	cudaDeviceSynchronize();
 	}
 	//Markov_Decision_Process();
 	deal_with_cuda_result();

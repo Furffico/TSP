@@ -296,6 +296,8 @@ __device__ void Identify_Promising_City_GPU(int Cur_City, int Begin_City, int *P
 		int Temp_City = Candidate_G[threadid*Total_thread_num + Cur_City*Max_Candidate_Num + i];
 		if (Temp_City == Begin_City)
 			continue;
+		if (Temp_City == Cur_City)
+			continue;
 		if (Temp_City == All_Node_G[threadid * Virtual_City_Num + Cur_City].Next_City)
 			continue;
 		if (Get_Potential_GPU(Cur_City, Temp_City, Total_thread_num, Virtual_City_Num, Weight_G, threadid, Total_Simulation_Times_G, Avg_Weight_G, Chosen_Times_G) < 1)

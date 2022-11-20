@@ -16,7 +16,7 @@
 #include <cuda_runtime.h>
 #include <helper_cuda.h>
 
-//#include <curand_kernel.h>
+#include <curand_kernel.h>
 
 
 #include <helper_functions.h>

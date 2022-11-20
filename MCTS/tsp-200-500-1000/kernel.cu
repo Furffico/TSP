@@ -294,7 +294,7 @@ __device__ void Identify_Promising_City_GPU(int Cur_City, int Begin_City, int *P
 	for (int i = 0; i<Candidate_Num_G[threadid * Virtual_City_Num + Cur_City]; i++)
 	{
 		int Temp_City = Candidate_G[threadid*Total_thread_num + Cur_City*Max_Candidate_Num + i];
-		if (Temp_City == Begin_City)
+		if (Temp_City == Begin_City || Temp_City == Cur_City)
 			continue;
 		if (Temp_City == All_Node_G[threadid * Virtual_City_Num + Cur_City].Next_City)
 			continue;
